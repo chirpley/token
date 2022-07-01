@@ -27,7 +27,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract ChirpleyToken is ERC20, ERC20Burnable, Ownable {
 
     string public _name = "Chirpley Token";
-    string public _symbol = "CHIRP";
+    string public _symbol = "CHRP";
     uint8 public _decimals = 18;
     uint256 public _totalSupply = 1 * 10**9 * 10 ** _decimals;
     constructor() ERC20(_name, _symbol) {
