@@ -4,16 +4,20 @@ Chirpley is the world’s first automated, peer-to-peer, all-in-one influencer m
 specifically focussed on nano and micro influencers.
 Chirpley will provide marketers with the freedom to act fast and effective,
 thanks to the possibility of a 1-click marketing bomb.
+
 Website: https://chirpley.ai
 App: https://app.chirpley.ai
-Discord: https://discord.gg/chirpley
+Gitbook: https://chirpley.gitbook.io
+Github: https://github.com/chirpley
+Medium: https://chirpley.medium.com
 Telegram: https://t.me/chirpley
 Twitter: https://twitter.com/chirpley
+Discord: https://discord.gg/chirpley
 Youtube: https://www.youtube.com/c/chirpley
 Tiktok: https://www.tiktok.com/@chirpley
 Instagram: https://www.instagram.com/chirpley/
 Facebook: https://www.facebook.com/chirpley
-Github: https://github.com/chirpley
+
 **/
 
 pragma solidity ^0.8.13;
@@ -61,10 +65,5 @@ contract ChirpleyToken is ERC20, ERC20Burnable, Ownable {
     function setAntisnipeAddress(address addr) external onlyOwner {
         antisnipe = IAntisnipe(addr);
     }
-
-    event Received(address, uint256);
-
-    receive() external payable {
-        emit Received(msg.sender, msg.value);
-    }
+    
 }
