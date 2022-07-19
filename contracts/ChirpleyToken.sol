@@ -36,10 +36,10 @@ interface IAntisnipe {
 }
 
 contract ChirpleyToken is ERC20, ERC20Burnable, Ownable {
-    string public _name = 'Chirpley Token';
-    string public _symbol = 'CHRP';
-    uint8 public _decimals = 18;
-    uint256 public _totalSupply = 1 * 10**9 * 10**_decimals;
+    string public constant _name = 'CToken';
+    string public constant _symbol = 'CRP';
+    uint8 public constant _decimals = 18;
+    uint256 public constant _totalSupply = 1 * 10**9 * 10**_decimals;
     IAntisnipe public antisnipe = IAntisnipe(address(0));
     bool public antisnipeDisable;
 
