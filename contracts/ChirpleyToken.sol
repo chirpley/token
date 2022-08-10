@@ -4,16 +4,20 @@ Chirpley is the world’s first automated, peer-to-peer, all-in-one influencer m
 specifically focussed on nano and micro influencers.
 Chirpley will provide marketers with the freedom to act fast and effective,
 thanks to the possibility of a 1-click marketing bomb.
+
 Website: https://chirpley.ai
 App: https://app.chirpley.ai
-Discord: https://discord.gg/chirpley
+Gitbook: https://chirpley.gitbook.io
+Github: https://github.com/chirpley
+Medium: https://chirpley.medium.com
 Telegram: https://t.me/chirpley
 Twitter: https://twitter.com/chirpley
+Discord: https://discord.gg/chirpley
 Youtube: https://www.youtube.com/c/chirpley
 Tiktok: https://www.tiktok.com/@chirpley
 Instagram: https://www.instagram.com/chirpley/
 Facebook: https://www.facebook.com/chirpley
-Github: https://github.com/chirpley
+
 **/
 
 pragma solidity ^0.8.13;
@@ -32,10 +36,10 @@ interface IAntisnipe {
 }
 
 contract ChirpleyToken is ERC20, ERC20Burnable, Ownable {
-    string public _name = 'Chirpley Token';
-    string public _symbol = 'CHRP';
-    uint8 public _decimals = 18;
-    uint256 public _totalSupply = 1 * 10**9 * 10**_decimals;
+    string public constant _name = 'Chirpley Token';
+    string public constant _symbol = 'CHRP';
+    uint8 public constant _decimals = 18;
+    uint256 public constant _totalSupply = 1 * 10**9 * 10**_decimals;
     IAntisnipe public antisnipe = IAntisnipe(address(0));
     bool public antisnipeDisable;
 
