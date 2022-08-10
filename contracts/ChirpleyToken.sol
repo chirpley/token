@@ -62,9 +62,4 @@ contract ChirpleyToken is ERC20, ERC20Burnable, Ownable {
         antisnipe = IAntisnipe(addr);
     }
 
-    event Received(address, uint256);
-
-    receive() external payable {
-        emit Received(msg.sender, msg.value);
-    }
 }
